@@ -1,0 +1,34 @@
+#
+# Default environment file that sets the home directory for zsh
+# dot files and kicks off the zsh initialization process.
+#
+# Authors:
+#   Vamshi Ponnapalli <vamshi.ponnapalli@gmail.com>
+#
+ZDOTDIR="$HOME/.zsh-files"
+
+local prompts_path functions_path fnpath
+
+# Paths to custom prompt definitions
+prompts_path=( $ZDOTDIR/modules/prompt/functions )
+
+# Paths to custom autoloaded functions
+functions_path=( helpers )
+functions_path=( $ZDOTDIR/modules/${^functions_path}/functions )
+
+# Add directories for (local) scripts and functions so they can be autoloaded
+# later.
+# NOTE: this has to be loaded *before* compinit
+fpath=(
+    $prompts_path
+    $functions_path
+    $fpath
+)
+# Autoload functions (all except prompts, which will get picked up by zprezto)
+setopt EXTENDED_GLOB
+for fnpath in $functions_path/*; do
+    autoload -Uz "${fnpath:t}"
+done
+
+# Source the default environment file.
+source "$ZDOTDIR/.zshenv"
