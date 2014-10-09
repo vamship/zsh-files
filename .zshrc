@@ -32,7 +32,7 @@ alias gr='git remote --verbose'
 alias nl='npm list --depth=0'
 
 # Core file edit stuff
-alias esh='vi ~/.zshrc;. ~/.zshrc'
+alias esh='vi ~/.zsh-files/.zshrc;. ~/.zsh-files/.zshrc'
 alias evi='vi ~/.vimrc'
 
 # Navigation shortcuts
