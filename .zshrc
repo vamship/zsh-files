@@ -40,8 +40,6 @@ alias cda='cd ~/Applications'
 alias cdp='cd ~/projects'
 alias cdw='cd ~/projects/wysknd'
 
-alias cdv='cd /mindtap-code/mindtap-vm'
-
 ###############################################################################
 # Shell options
 ###############################################################################
