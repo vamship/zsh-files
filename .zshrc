@@ -30,6 +30,7 @@ alias gr='git remote --verbose'
 
 # NPM stuff
 alias nl='npm list --depth=0'
+alias ndb='node-debug'
 
 # Core file edit stuff
 alias esh='vi ~/.zsh-files/.zshrc;. ~/.zsh-files/.zshrc'
