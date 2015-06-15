@@ -10,6 +10,13 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+# Source AWS Auto completer
+if [[ -s "/usr/local/Cellar/awscli/1.7.18/libexec/bin/aws_zsh_completer.sh" ]]; then
+  source "/usr/local/Cellar/awscli/1.7.18/libexec/bin/aws_zsh_completer.sh"
+else
+  echo 'AWS Auto completer not found'
+fi
+
 # Basic stuff
 alias md='mkdir -p'
 alias lr='find .'
@@ -48,7 +55,7 @@ bindkey -v
 export TERM=xterm-256color
 export KEYTIMEOUT=1
 export CLICOLOR
-export EDITOR=vi
-export VISUAL=vi
+export EDITOR=vim
+export VISUAL=vim
 #export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 #export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
