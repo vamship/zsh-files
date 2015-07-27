@@ -13,6 +13,7 @@ local prompts_path functions_path fnpath
 prompts_path=( $ZDOTDIR/modules/prompt/functions )
 
 # Paths to custom autoloaded functions
+functions_path=(commands)
 functions_path=( $ZDOTDIR/modules/${^functions_path}/functions )
 
 # Add directories for (local) scripts and functions so they can be autoloaded
