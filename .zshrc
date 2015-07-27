@@ -48,6 +48,10 @@ alias cda='cd ~/Applications'
 alias cdp='cd ~/projects'
 alias cdw='cd ~/projects/wysknd'
 
+# Application shortcuts
+alias ard='open ~/Applications/Arduino/Arduino.app'
+alias esp='java -jar ~/Applications/ESPlorer/ESPlorer.jar'
+
 ###############################################################################
 # Shell options
 ###############################################################################
