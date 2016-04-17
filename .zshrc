@@ -10,9 +10,17 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+# Load NVM
+export NVM_DIR="$HOME/.nvm"
+if [[ -s "$NVM_DIR/nvm.sh" ]]; then
+    source "$NVM_DIR/nvm.sh"
+else
+    echo 'NVM not installed'
+fi
+
 # Source AWS Auto completer
-if [[ -s "/usr/local/Cellar/awscli/1.7.18/libexec/bin/aws_zsh_completer.sh" ]]; then
-  source "/usr/local/Cellar/awscli/1.7.18/libexec/bin/aws_zsh_completer.sh"
+if [[ -s "/usr/local/Cellar/awscli/1.8.13/libexec/bin/aws_zsh_completer.sh" ]]; then
+  source "/usr/local/Cellar/awscli/1.8.13/libexec/bin/aws_zsh_completer.sh"
 else
   echo 'AWS Auto completer not found'
 fi
