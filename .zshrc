@@ -12,15 +12,15 @@ fi
 
 # Load NVM
 export NVM_DIR="$HOME/.nvm"
-if [[ -s "$NVM_DIR/nvm.sh" ]]; then
-    source "$NVM_DIR/nvm.sh"
+if [[ -s "$(brew --prefix nvm)/nvm.sh" ]]; then
+    source "$(brew --prefix nvm)/nvm.sh"
 else
     echo 'NVM not installed'
 fi
 
 # Source AWS Auto completer
-if [[ -s "/usr/local/Cellar/awscli/1.8.13/libexec/bin/aws_zsh_completer.sh" ]]; then
-  source "/usr/local/Cellar/awscli/1.8.13/libexec/bin/aws_zsh_completer.sh"
+if [[ -s "$(brew --prefix awscli)/libexec/bin/aws_zsh_completer.sh" ]]; then
+  source "$(brew --prefix awscli)/libexec/bin/aws_zsh_completer.sh"
 else
   echo 'AWS Auto completer not found'
 fi
