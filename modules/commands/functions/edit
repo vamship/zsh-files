@@ -23,6 +23,10 @@ else
     then
         specFile="./test/unit/"${fileName}"-spec.js"
         sourceFile="./lib/"${fileName}".js"
+    elif [[ "$mode" == "a" ]]
+    then
+        specFile="./test/unit/"${fileName}"-spec.js"
+        sourceFile="./app/"${fileName}".js"
     else
         echo "unrecognized mode: "$mode
         exit
