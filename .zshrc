@@ -10,6 +10,15 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+# Configure python virtual env
+if [[ -s "/usr/local/bin/virtualenvwrapper.sh" ]] then
+    export WORKON_HOME=$HOME/.virtualenvs
+    export MSYS_HOME=/c/msys/1.0
+    source /usr/local/bin/virtualenvwrapper.sh
+else
+    echo 'virtualenvwrapper not available'
+fi
+
 # Load NVM
 export NVM_DIR="$HOME/.nvm"
 if [[ -s "$(brew --prefix nvm)/nvm.sh" ]]; then
