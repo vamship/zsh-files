@@ -30,5 +30,8 @@ for fnpath in $functions_path/*; do
     autoload -Uz "${fnpath:t}"
 done
 
+#Auto load built in zsh functions
+autoload -U zmv
+
 # Source the default environment file.
 source "$ZDOTDIR/.zshenv"
