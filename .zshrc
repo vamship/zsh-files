@@ -16,7 +16,7 @@ if [[ -s "/usr/local/bin/virtualenvwrapper.sh" ]] then
     export MSYS_HOME=/c/msys/1.0
     source /usr/local/bin/virtualenvwrapper.sh
 else
-    echo 'virtualenvwrapper not available'
+    echo 'python virtual env not available'
 fi
 
 # Load NVM
