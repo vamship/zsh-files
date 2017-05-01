@@ -10,28 +10,35 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+# Load NVM
+export NVM_DIR="$HOME/.nvm"
+if [[ -s "$NVM_DIR/nvm.sh" ]]; then
+    echo '- Initializing nvm'
+    source "$NVM_DIR/nvm.sh"
+else
+    echo '! NVM not installed'
+fi
+
+if ! type brew > /dev/null; then
+    echo '! Homebrew not installed. Skpping AWS autocompletion and nvm initialization'
+else
+    # Source AWS Auto completer
+    if [[ -s "$(brew --prefix awscli)/libexec/bin/aws_zsh_completer.sh"  ]]; then
+        echo '- Loading AWS auto completion'
+        source "$(brew --prefix awscli)/libexec/bin/aws_zsh_completer.sh"
+    else
+        echo '! AWS Auto completer not found'
+    fi
+fi
+
 # Configure python virtual env
 if [[ -s "/usr/local/bin/virtualenvwrapper.sh" ]] then
+    echo '- Initializing python virtual wrapper'
     export WORKON_HOME=$HOME/.virtualenvs
     export MSYS_HOME=/c/msys/1.0
     source /usr/local/bin/virtualenvwrapper.sh
 else
-    echo 'virtualenvwrapper not available'
-fi
-
-# Load NVM
-export NVM_DIR="$HOME/.nvm"
-if [[ -s "$(brew --prefix nvm)/nvm.sh" ]]; then
-    source "$(brew --prefix nvm)/nvm.sh"
-else
-    echo 'NVM not installed'
-fi
-
-# Source AWS Auto completer
-if [[ -s "$(brew --prefix awscli)/libexec/bin/aws_zsh_completer.sh" ]]; then
-  source "$(brew --prefix awscli)/libexec/bin/aws_zsh_completer.sh"
-else
-  echo 'AWS Auto completer not found'
+    echo '! virtualenvwrapper not available'
 fi
 
 # ZSH specials

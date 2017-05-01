@@ -2,6 +2,7 @@
 .*.swo
 
 .zcompdump
+.zcompcache
 .zhistory
 
 .DS_Store
