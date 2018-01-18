@@ -78,6 +78,7 @@ alias cdw='cd ~/projects/wysknd'
 # Application shortcuts
 alias ard='open ~/Applications/Arduino/Arduino.app'
 alias esp='java -jar ~/Applications/ESPlorer/ESPlorer.jar'
+alias mos='~/.mos/bin/mos'
 
 ###############################################################################
 # Shell options
