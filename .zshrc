@@ -89,5 +89,3 @@ export KEYTIMEOUT=1
 export CLICOLOR
 export EDITOR=vim
 export VISUAL=vim
-#export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
-#export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
