@@ -19,16 +19,11 @@ else
     echo '! NVM not installed'
 fi
 
-if ! type brew > /dev/null; then
-    echo '! Homebrew not installed. Skpping AWS autocompletion and nvm initialization'
+if [[ -s "/usr/local/bin/aws_zsh_completer.sh" ]]; then
+    echo '- Loading AWS auto completion'
+    source "/usr/local/bin/aws_zsh_completer.sh"
 else
-    # Source AWS Auto completer
-    if [[ -s "$(brew --prefix awscli)/libexec/bin/aws_zsh_completer.sh"  ]]; then
-        echo '- Loading AWS auto completion'
-        source "$(brew --prefix awscli)/libexec/bin/aws_zsh_completer.sh"
-    else
-        echo '! AWS Auto completer not found'
-    fi
+    echo '! Skpping AWS autocompletion and nvm initialization'
 fi
 
 # Configure python virtual env
