@@ -45,7 +45,7 @@ alias lr='find .'
 alias l='ls -lrt'
 alias c='clear'
 alias backup_profile='~/backup.sh'
-alias vi='vim'
+alias vi='nvim'
 
 # Git stuff
 alias gs='git status -sb'
