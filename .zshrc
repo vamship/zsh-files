@@ -22,6 +22,9 @@ fi
 if [[ -s "/usr/local/bin/aws_zsh_completer.sh" ]]; then
     echo '- Loading AWS auto completion'
     source "/usr/local/bin/aws_zsh_completer.sh"
+elif [[ -s "$(brew --prefix awscli)/libexec/bin/aws_zsh_completer.sh"  ]]; then
+    echo '- Loading AWS auto completion'
+    source "$(brew --prefix awscli)/libexec/bin/aws_zsh_completer.sh"
 else
     echo '! Skpping AWS autocompletion and nvm initialization'
 fi
@@ -82,5 +85,5 @@ bindkey -v
 export TERM=xterm-256color
 export KEYTIMEOUT=1
 export CLICOLOR
-export EDITOR=vim
-export VISUAL=vim
+export EDITOR=nvim
+export VISUAL=nvim
