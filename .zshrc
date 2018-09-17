@@ -22,7 +22,7 @@ fi
 if [[ -s "/usr/local/bin/aws_zsh_completer.sh" ]]; then
     echo '- Loading AWS auto completion'
     source "/usr/local/bin/aws_zsh_completer.sh"
-elif type brew > /dev/null; then
+elif type "brew" > /dev/null; then
     if [[ -s "$(brew --prefix awscli)/libexec/bin/aws_zsh_completer.sh"  ]]; then
         echo '- Loading AWS auto completion'
         source "$(brew --prefix awscli)/libexec/bin/aws_zsh_completer.sh"
