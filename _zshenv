@@ -16,7 +16,7 @@ prompts_path=( $ZDOTDIR/modules/prompt/functions )
 completion_path=( $ZDOTDIR/modules/completion )
 
 # Paths to custom autoloaded functions
-functions_path=(commands)
+functions_path=( commands k8s )
 functions_path=( $ZDOTDIR/modules/${^functions_path}/functions )
 
 # Add directories for (local) scripts and functions so they can be autoloaded
@@ -30,7 +30,7 @@ fpath=(
 )
 # Autoload functions (all except prompts, which will get picked up by zprezto)
 setopt EXTENDED_GLOB
-for fnpath in $functions_path/*; do
+for fnpath in ${^functions_path}/*; do
     autoload -Uz "${fnpath:t}"
 done
 
