@@ -31,16 +31,6 @@ else
     echo '! Skpping AWS autocompletion and nvm initialization'
 fi
 
-# Configure python virtual env
-if [[ -s "/usr/local/bin/virtualenvwrapper.sh" ]] then
-    echo '- Initializing python virtual wrapper'
-    export WORKON_HOME=$HOME/.virtualenvs
-    export MSYS_HOME=/c/msys/1.0
-    source /usr/local/bin/virtualenvwrapper.sh
-else
-    echo '! virtualenvwrapper not available'
-fi
-
 # ZSH specials
 alias mmv='noglob zmv -W'
 
