@@ -39,7 +39,6 @@ alias md='mkdir -p'
 alias lr='find .'
 alias l='ls -lrt'
 alias c='clear'
-alias backup_profile='~/backup.sh'
 alias vi='nvim'
 
 # Git stuff
@@ -63,13 +62,7 @@ alias evi='vi ~/.vimrc'
 # Navigation shortcuts
 alias cda='cd ~/Applications'
 alias cdp='cd ~/projects'
-alias cdw='cd ~/projects/wysknd'
 alias cdv='cd ~/projects/vamship'
-
-# Application shortcuts
-alias ard='open ~/Applications/Arduino/Arduino.app'
-alias esp='java -jar ~/Applications/ESPlorer/ESPlorer.jar'
-alias mos='~/.mos/bin/mos'
 
 ###############################################################################
 # Shell options
