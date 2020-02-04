@@ -4,5 +4,6 @@
 .zcompdump
 .zcompcache
 .zhistory
+.zsh_history
 
 .DS_Store
