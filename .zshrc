@@ -11,13 +11,13 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Load NVM
-export NVM_DIR="$HOME/.nvm"
-if [[ -s "$NVM_DIR/nvm.sh" ]]; then
-    echo '- Initializing nvm'
-    source "$NVM_DIR/nvm.sh"
-else
-    echo '! NVM not installed'
-fi
+# export NVM_DIR="$HOME/.nvm"
+# if [[ -s "$NVM_DIR/nvm.sh" ]]; then
+#     echo '- Initializing nvm'
+#     source "$NVM_DIR/nvm.sh"
+# else
+#     echo '! NVM not installed'
+# fi
 
 if [[ -s "/usr/local/bin/aws_zsh_completer.sh" ]]; then
     echo '- Loading AWS auto completion'
