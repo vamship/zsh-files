@@ -1,5 +1,7 @@
 # Make sure that rust is installed
-if (( ! $+commands[cargo] )); then
+command -v $HOME/.cargo/bin
+
+if (( ! $? )); then
     return 1
 fi
 
