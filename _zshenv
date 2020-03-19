@@ -7,20 +7,20 @@
 #
 ZDOTDIR="$HOME/.zsh-files"
 
-local prompts_path completion_path
+local prompts_path
 
 # Paths to custom prompt definitions
 prompts_path=( $ZDOTDIR/prompt/functions )
 
 ## Paths to custom completion scripts
-completion_path=( $ZDOTDIR/completion )
+# completion_path=( $ZDOTDIR/completion )
 
 # Add directories for (local) scripts and functions so they can be autoloaded
 # later.
 # NOTE: this has to be loaded *before* compinit
 fpath=(
     $prompts_path
-    $completion_path
+    # $completion_path
     $fpath
 )
 

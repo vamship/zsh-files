@@ -38,6 +38,7 @@ zstyle ':prezto:load' pmodule \
   'node' \
   'docker' \
   'shortcuts' \
+  'docker-completion' \
   'k8s' \
   'rust'
 
