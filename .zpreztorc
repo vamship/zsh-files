@@ -36,7 +36,10 @@ zstyle ':prezto:load' pmodule \
   'history-substring-search' \
   'prompt' \
   'node' \
-  'docker'
+  'docker' \
+  'shortcuts' \
+  'k8s' \
+  'rust'
 
 #
 # Editor

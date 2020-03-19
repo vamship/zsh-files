@@ -7,17 +7,13 @@
 #
 ZDOTDIR="$HOME/.zsh-files"
 
-local prompts_path completion_path functions_path fnpath
+local prompts_path completion_path
 
 # Paths to custom prompt definitions
-prompts_path=( $ZDOTDIR/modules/prompt/functions )
+prompts_path=( $ZDOTDIR/prompt/functions )
 
-# Paths to custom completion scripts
-completion_path=( $ZDOTDIR/modules/completion )
-
-# Paths to custom autoloaded functions
-functions_path=( commands k8s )
-functions_path=( $ZDOTDIR/modules/${^functions_path}/functions )
+## Paths to custom completion scripts
+completion_path=( $ZDOTDIR/completion )
 
 # Add directories for (local) scripts and functions so they can be autoloaded
 # later.
@@ -25,17 +21,11 @@ functions_path=( $ZDOTDIR/modules/${^functions_path}/functions )
 fpath=(
     $prompts_path
     $completion_path
-    $functions_path
     $fpath
 )
-# Autoload functions (all except prompts, which will get picked up by zprezto)
-setopt EXTENDED_GLOB
-for fnpath in ${^functions_path}/*; do
-    autoload -Uz "${fnpath:t}"
-done
 
-#Auto load built in zsh functions
-autoload -U zmv
+# Configure custom module directory for zprezto
+zstyle ':prezto:load' pmodule-dirs $ZDOTDIR/modules
 
 # Source the default environment file.
 source "$ZDOTDIR/.zshenv"

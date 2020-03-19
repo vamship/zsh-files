@@ -1,7 +1,0 @@
-#!/bin/zsh
-if [ ! -z "$1" ]
-then
-    find .|grep $1
-else
-    find .
-fi

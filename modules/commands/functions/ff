@@ -1,8 +1,0 @@
-#!/bin/zsh
-
-if [ ! -z "$1" ]
-then
-    ls -lAh|grep $1
-else
-    ls -lAh
-fi
