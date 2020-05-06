@@ -1,16 +1,4 @@
 #!/bin/zsh
 
-local cluster=$(kubectl config view --minify -o jsonpath='{.clusters[].name}')
-local cluster_path="$(helm home)/tls/${cluster}"
-
-if [ ! -z "${__K8S_DEBUG}" ]
-then
-    echo "Accessing cluster: ${cluster}"
-fi
-
 helm $@ \
-    --tls \
-    --tls-ca-cert ${cluster_path}/helm-ca.cert.pem \
-    --tls-cert ${cluster_path}/helm.cert.pem \
-    --tls-key ${cluster_path}/helm.key.pem
-
+    --tls
