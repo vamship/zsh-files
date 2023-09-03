@@ -1,5 +1,5 @@
 # Make sure that adb is installed.
-if [ ! -f /Users/vamship/Library/Android/sdk/platform-tools/adb ]; then
+if [ ! -f ${HOME}/Library/Android/sdk/platform-tools/adb ]; then
     return 1
 fi
 
