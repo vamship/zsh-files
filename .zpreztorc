@@ -41,6 +41,8 @@ zstyle ':prezto:load' pmodule \
   'shortcuts' \
   'docker-completion' \
   'k8s' \
+  'android-debugger' \
+  'wifi' \
   'rust'
 
 #
