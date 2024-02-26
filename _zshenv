@@ -5,7 +5,7 @@
 # Authors:
 #   Vamshi Ponnapalli <vamshi.ponnapalli@gmail.com>
 #
-ZDOTDIR="$HOME/.zsh-files"
+ZDOTDIR="$HOME/.config/zsh-files"
 
 local prompts_path
 
