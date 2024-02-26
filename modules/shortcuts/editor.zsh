@@ -2,5 +2,5 @@
 alias vi='nvim'
 
 # Core file edit stuff
-alias esh='vi ~/.zsh-files/.zshrc;. ~/.zsh-files/.zshrc'
+alias esh='vi ~/.config/zsh-files/.zshrc;. ~/.config/zsh-files/.zshrc'
 alias evi='vi ~/.vimrc'
